@@ -1,0 +1,84 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127847870-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127847870-1');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1999559671198480",
+          enable_page_level_ads: true
+        });
+    </script>
+
+    <meta name="google-site-verification" content="JP_HSxFafxA1FLTyFjWbG8sscj2cL3qWFj16YmIb8cU" />
+
+    <title>Gifther | The perfect gift for her</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="dfd5dd58e7ff0f2abe945a5fe1991fc3"/>
+
+    <style>
+        { margin: 0; padding: 0; }
+
+        html {
+            background: url('{% static 'img/bg.jpg' %}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img class="logo" src="{% static 'img/ghlogo.svg' %}" alt="gifther logo">
+      </div>
+
+      <div id="mainbox">
+        <div class="slogan">
+          <h1 id="slogan">{% trans 'Find the perfect gift for her' %}</h1>
+        </div>
+
+        <div class="search">
+          {% block content %}
+          {% endblock%}
+        </div>
+     </div>
+     <div class="social">
+         <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/giftherapp" class="socials"><img src="{% static 'img/insta.svg' %}"</a>
+         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/giftherapp/" class="socials"><img src="{% static 'img/pint.svg' %}"</a>
+         <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/giftherapp" class="socials"><img src="{% static 'img/tw.svg' %}"</a>
+     </div>
+    </div>
+
+    <!-- Twitter universal website tag code -->
+    <script>
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','o0hiu');
+        twq('track','PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
+  </body>
+</html>

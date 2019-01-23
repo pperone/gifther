@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700,800');
+
+
+@media screen and (max-width: 490px) {
+  .logo {
+    width: 40%;
+  }
+  #top-text {
+    font-size: 0.7em;
+    font-weight: 700;
+  }
+  #slogan {
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align-last: justify;
+    text-justify: inter-character;
+  }
+  #mainbox {
+      position: absolute;
+      width: 300px;
+      bottom: 10;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  #resultsbox {
+    padding-top: 10px;
+  }
+  .slogan {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 362px) {
+    .card {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 491px) and (max-width: 600px) {
+  .logo {
+    width: 50%;
+  }
+  #top-text {
+    font-size: 0.8em;
+  }
+  #slogan {
+    width: 100%;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  input {
+      min-width: 300px;
+  }
+  .slogan {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+ body {
+   width: 90%;
+   margin: auto;
+ }
+ .card {
+   width: 100%;
+ }
+}
+
+@media screen and (min-width: 730px) {
+  .card {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+  .projects {
+    width: 1024px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+    .social {
+        display: none;
+    }
+}
+
+@media only screen and (min-height: 650px) {
+    .social {
+        display: flex;
+        vertical-align: middle;
+        position: absolute;
+        float: right;
+        right: 0;
+        bottom: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+html {
+  text-align: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin: 0px;
+  border: 0px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  background-image: linear-gradient(to top right, rgba(255,0,54,0.7), rgba(237,208,147,0.7));
+}
+
+.container-results {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  vertical-align: top;
+}
+
+.logo {
+  width: 70%;
+}
+
+form {
+  border: none;
+}
+
+fieldset {
+  border: none;
+}
+
+select {
+  -webkit-appearance:none;
+  background-color: transparent;
+  background: url("/static/img/downarrow.png") no-repeat 96% 50%;
+  font-size: 1em;
+  font-family: Montserrat;
+  border-radius: 5px;
+  border-color: white;
+  border-width: thin;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+option {
+  color: #FF0036;
+}
+
+input {
+  -webkit-appearance: none;
+  border-width: thin;
+  font-size: 1em;
+  min-width: 250px;
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  color: #FF0036;
+  font-family: Montserrat;
+  font-weight: bold;
+  padding: 20px;
+  margin-left: 0;
+}
+
+.button {
+    cursor: pointer;
+}
+
+#mainbox {
+    position: absolute;
+    max-width: 800px;
+    top: 20%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#resultsbox {
+  background-color: white;
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 40px;
+}
+
+
+.resultsarea {
+  padding: 20px;
+  margin: auto;
+  width: 75%;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.logo-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.logo-results {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-image: linear-gradient(to top right, #FF0036, #EDD093);
+}
+
+.form-results {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #F7EDBC;
+}
+
+.logo {
+    width: 100%;
+    max-width: 150px;
+}
+
+.top-side {
+  width: 70%;
+  text-align: right;
+  padding-top: 30px;
+}
+
+.slogan {
+  font-family: 'Montserrat';
+  font-variant-caps: all-small-caps;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#result-title {
+  font-family: 'Montserrat', arial;
+  font-weight: 300;
+  font-size: 2em;
+  color:  #FF0036;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.voteblock {
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    display: run-in;
+    left: 10px;
+    top: 10px;
+}
+
+.votes {
+    height: 30%;
+    display: inline-table;
+    vertical-align: middle;
+    text-align: center;
+    mix-blend-mode: difference;
+}
+
+.card {
+  height: 635px;
+  background-color: #fcfcfc;
+  border: 1px solid #DDDDDD;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border-collapse: separate;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: #333333;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+a.card-link:visited {
+  color: #333333;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.bottom {
+    height: 50%;
+    padding: 20px;
+    color: #666666;
+}
+
+.pricetag {
+    color: #FF0036;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.pricebuy {
+    width: 90%;
+    display: inline-block;
+}
+
+.descript {
+    min-height: 80px;
+}
+
+.productname {
+  min-height: 60px;
+}
+
+.price {
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    text-align: center;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.onlyprice {
+    text-align: center;
+}
+
+.onlypricetag {
+    color: #FF0036;
+}
+
+.outer {
+    min-height: 50px;
+}
+
+.buyer {
+    width: 50px;
+    height: 50px;
+    background-color: #FF0036;
+    border-radius: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#top-text {
+  font-family: 'Montserrat';
+}
+
+#slogan {
+  width: 100%;
+  color: white;
+  font-weight: lighter;
+}
+
+.skills {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.follow {
+  vertical-align: middle;
+}
+
+.socials:hover {
+    opacity: 0.5;
+}
+
+.socials {
+    width: 36px;
+    margin-left: 5px;
+}

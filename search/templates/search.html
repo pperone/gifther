@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Gifther | Results
+{% endblock %}
+
+{% block name %}
+    {{ woman }}
+{% endblock %}
+
+{% block occasion %}
+    {{ occasion }}
+{% endblock %}
+
+{% block content %}
+    {% for result in results %}
+      <div class="card">
+        <div class="top">
+            <div class="voteblock">
+                <div class="arrow"><img src="{% static 'img/up.png' %}" id="{{ result.pk }}" name="plus" class="arrowpic"></div>
+                <div class="votes"><p id="numvotes{{ result.pk }}">{{ result.votes }}</p></div>
+                <div class="arrow"><img src="{% static 'img/down.png' %}" id="{{ result.pk }}" name="minus" class="arrowpic"></div>
+            </div>
+          <img class="image" src="{{ result.picture }}" alt="{{ result.name }}">
+        </div>
+        <div class="bottom">
+          <div class="productname">
+            <h2>{{ result.name }}</h2>
+          </div>
+          <div class="descript">
+              <p>{{ result.description }}</p>
+          </div>
+          <br>
+          <div class="outer">
+              {% if result.link %}
+                  <div class="price">
+                      <h3 class="pricetag">${{ result.price}}</h3>
+                  </div>
+                  <a target="_blank" rel="noopener noreferrer" href="{{ result.link }}">
+                      <div class="buyer">
+                          <img class ="buyicon" src="{% static 'img/buyicon.svg' %}" width="30px" height="30px">
+                      </div>
+                  </a>
+              {% else %}
+                  <div class="onlyprice">
+                      <h3 class="onlypricetag">${{ result.price}}</h3>
+                  </div>
+              {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}

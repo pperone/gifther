@@ -1,0 +1,101 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127847870-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127847870-1');
+    </script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1999559671198480",
+            enable_page_level_ads: true
+          });
+    </script>
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="container-results">
+      <div class="logo-results">
+        <a href={% url 'gifther-home'%}><img class="logo" src="{% static 'img/ghlogo.svg' %}" alt="gifther logo"></a>
+      </div>
+
+      <div id="resultsbox">
+        <div>
+          <h2 id="result-title">here are the best <span class="highlight">{% block occasion %}{% endblock %}</span> gifts for your <span class="highlight">{% block name %}{% endblock %}</span>:</h2>
+        </div>
+
+        <div class="resultsarea">
+          {% block content %}
+          {% endblock%}
+        </div>
+     </div>
+    </div>
+
+    <!-- Twitter universal website tag code -->
+    <script>
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','o0hiu');
+        twq('track','PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
+  </body>
+
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+
+      $("img[name=plus]").click(function () {
+        pk = $(this).attr("id");
+
+        $.ajax({
+          url: '/do_vote/',
+          data: {
+            'vote': 'up',
+            'pk': pk
+          },
+          dataType: 'json',
+          success: function (data) {
+            $("p[id=numvotes" + pk + "]").text(data.votes);
+          }
+        });
+
+      });
+
+      $("img[name=minus]").click(function () {
+        pk = $(this).attr("id");
+
+        $.ajax({
+          url: '/do_vote/',
+          data: {
+            'vote': 'down',
+            'pk': pk
+          },
+          dataType: 'json',
+          success: function (data) {
+            $("p[id=numvotes" + pk + "]").text(data.votes);
+          }
+        });
+
+      });
+
+  </script>
+
+</html>
