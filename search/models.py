@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+# Initially the application's database is centered around a single model, product
 class Product(models.Model):
     picture = models.TextField()
     name = models.CharField(max_length=30)
